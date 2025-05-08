@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.logo {
+  will-change: filter;
+  transition: filter 0.75s;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #24c8db);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+}
+
+body {
+  background-color: #23272a;
+}
+
+.heading-gradient {
+  @apply bg-gradient-orange-yellow text-transparent bg-clip-text;
+}
+
+.panel-dark {
+  @apply bg-darkpanel text-white rounded-lg shadow p-4;
+}
+
+.sidebar {
+  @apply bg-darkpanel h-full min-h-screen w-56 flex flex-col p-4 shadow-lg;
+}
+
+.nav-item {
+  @apply flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-gradient-orange-yellow hover:text-gray-900 transition font-medium cursor-pointer;
+}
+
+.nav-item.active {
+  @apply bg-gradient-orange-yellow text-gray-900;
+}
+
+.main-content {
+  @apply flex-1 p-8;
+}
